@@ -4,12 +4,22 @@ Failed = 0
 stock = input("Please enter the stock quantity:")
 
 while stock != "quit":
-    if not stock.isdigit() or stock < str(0):
-        print("Invalid stock quantity. Please enter again!")
-        stock =input("Please enter the stock quantity:")
+    if not stock.isdigit():
+        print("Invalid stock quantity. Please enter again.")
         Failed += 1
+        print("Number of Failed/Rejected Entries:", Failed, "units")
+
     else:
-        inventory += 1
+        inventory += int(stock)
+        print("Current Stock Quantity:", inventory)
+    if inventory > 500:
+        print("Inventory is exceeded.")
+        break
+    if inventory == 500:
+        print("Maximum inventory reached. No more stock can be added.")
+        break
+    stock = input("Please enter the stock quantity:")
+
 
 print("Total Units Processed:", inventory)
 print ("Number of Failed/Rejected Entries:", Failed, "units")
