@@ -3,7 +3,7 @@ Failed = 0
 
 stock = input("Please enter the stock quantity:")
 
-while stock != "quit":
+while stock != "quit":   
     if not stock.isdigit():
         print("Invalid stock quantity. Please enter again.")
         Failed += 1
