@@ -8,7 +8,6 @@ while stock != "quit":
         print("Invalid stock quantity. Please enter again.")
         Failed += 1
         print("Number of Failed/Rejected Entries:", Failed, "units")
-
     else:
         inventory += int(stock)
         print("Current Stock Quantity:", inventory)
@@ -20,10 +19,7 @@ while stock != "quit":
         break
     stock = input("Please enter the stock quantity:")
 
-
 print("Total Units Processed:", inventory)
 print ("Number of Failed/Rejected Entries:", Failed, "units")
 
-if inventory > 500:
-    print("Inventory is exceeded.")
     
